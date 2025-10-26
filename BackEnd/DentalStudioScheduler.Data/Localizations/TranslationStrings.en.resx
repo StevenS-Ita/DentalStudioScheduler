@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="common.data-not-correct" xml:space="preserve">
+    <value>Data not correct</value>
+  </data>
+  <data name="common.invalid-data" xml:space="preserve">
+    <value>Invalid data</value>
+  </data>
+  <data name="common.invalid-page" xml:space="preserve">
+    <value>Invalid page</value>
+  </data>
+  <data name="common.invalid-page-size" xml:space="preserve">
+    <value>Invalid page size</value>
+  </data>
+  <data name="common.not-found" xml:space="preserve">
+    <value>Not found</value>
+  </data>
+  <data name="error-help.invalid-help" xml:space="preserve">
+    <value>Help text is not valid</value>
+  </data>
+  <data name="error-help.remove-translation" xml:space="preserve">
+    <value>This error was translated in other languages, remove those translations first</value>
+  </data>
+  <data name="error-help.no-en-translation" xml:space="preserve">
+    <value>This help don't exist in english. You cannot create a translation</value>
+  </data>
+  <data name="error-help.used-by-error" xml:space="preserve">
+    <value>This help is used is some errors, change it from them before deliting it</value>
+  </data>
+  <data name="common.server-not-reachable" xml:space="preserve">
+    <value>The server is not reachable</value>
+  </data>
+  <data name="common.code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="common.description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="common.maintenance-nr" xml:space="preserve">
+    <value>Maintenance nr</value>
+  </data>
+  <data name="common.date-create" xml:space="preserve">
+    <value>Date create</value>
+  </data>
+  <data name="common.status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="common.notes" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="common.date-close" xml:space="preserve">
+    <value>Date close</value>
+  </data>
+  <data name="common.components" xml:space="preserve">
+    <value>Components</value>
+  </data>
+  <data name="common.hours" xml:space="preserve">
+    <value>Hours</value>
+  </data>
+  <data name="activities.not-found" xml:space="preserve">
+    <value>Activities codes not found for the specified criteria</value>
+  </data>
+  <data name="activity.not-found" xml:space="preserve">
+    <value>Activity code not found</value>
+  </data>
+  <data name="common.sort-data-not-correct" xml:space="preserve">
+    <value>Sort data not correct</value>
+  </data>
+  <data name="commission.not-found" xml:space="preserve">
+    <value>Commission code non found</value>
+  </data>
+  <data name="commissions.not-found" xml:space="preserve">
+    <value>No commissions with the specified criteria were found</value>
+  </data>
+  <data name="registrations.not-found" xml:space="preserve">
+    <value>Registrations non found for the specified criteria</value>
+  </data>
+  <data name="registration.not-found" xml:space="preserve">
+    <value>Registration non found</value>
+  </data>
+  <data name="activity.code-duplicate" xml:space="preserve">
+    <value>An activity with the same code are found. Please check the code inserted</value>
+  </data>
+  <data name="commission.code-duplicate" xml:space="preserve">
+    <value>An commission with the same code are found. Please check the code inserted</value>
+  </data>
+  <data name="commission.cannot-delete-used-by-registration" xml:space="preserve">
+    <value>Unable to delete because it is uses at least in one registration</value>
+  </data>
+  <data name="activity.cannot-delete-used-by-registration" xml:space="preserve">
+    <value>Unable to delete activity because it is used in at least one registration</value>
+  </data>
+  <data name="common.user-no-roles" xml:space="preserve">
+    <value>Unable to perform action, current user has no roles</value>
+  </data>
+  <data name="common.user-unauthorized" xml:space="preserve">
+    <value>Unable to perform action, user is not authorized</value>
+  </data>
+  <data name="activity-group.not-found" xml:space="preserve">
+    <value>Activity group not found</value>
+  </data>
+  <data name="people.cannot-delete" xml:space="preserve">
+    <value>Cannot delete because it's used somewhere else</value>
+  </data>
+  <data name="people.not-found" xml:space="preserve">
+    <value>No operator found with that criteria</value>
+  </data>
+  <data name="people.code-duplicate" xml:space="preserve">
+    <value>An operator with the same code already exists</value>
+  </data>
+  <data name="activity.cannot-delete-used-by-group" xml:space="preserve">
+    <value>Unable to delete activity because it's linked with an activity group</value>
+  </data>
+  <data name="activity.cannot-edit-used-by-group" xml:space="preserve">
+    <value>Unable to edit activity because is linked with one activity group</value>
+  </data>
+  <data name="activity-group.cannot-delete-used-by-activity" xml:space="preserve">
+    <value>Unable to delete activity group because it's used in one activity</value>
+  </data>
+  <data name="activity-group.cannot-delete-used-by-people" xml:space="preserve">
+    <value>Unable to delete because it is used by one or more operators</value>
+  </data>
+  <data name="activity-group.cannot-edit-used-by-activity" xml:space="preserve">
+    <value>Unable to edit the activity group because it's used by one activity</value>
+  </data>
+  <data name="activity-group.cannot-edit-used-by-people" xml:space="preserve">
+    <value>Unable to edit the activity group because it's used by one operator</value>
+  </data>
+  <data name="registration.max-hours-exceeded" xml:space="preserve">
+    <value>Maximum hours per day exceeded</value>
+  </data>
+  <data name="activity-group.code-duplicate" xml:space="preserve">
+    <value>Unable to save the code is a duplicate</value>
+  </data>
+  <data name="people.user-already-linked" xml:space="preserve">
+    <value>The selected login user is already linked with another operator</value>
+  </data>
+  <data name="activity.cannot-insert-obsolete" xml:space="preserve">
+    <value>Unable to insert activity because is not active and linked with an activity group</value>
+  </data>
+</root>

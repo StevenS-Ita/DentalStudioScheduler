@@ -1,0 +1,22 @@
+L’obiettivo è realizzare una piccola applicazione per la gestione degli appuntamenti di uno studio dentistico, composta da:
+	-> Backend: Asp.net (Minimal API / AOT)
+	-> Frontend: Angular 20 
+
+Requisiti funzionali:
+	- L’utente deve poter visualizzare le fasce orarie disponibili e prenotare un appuntamento di 1h
+	- Se l’utente tenta di prenotare una fascia già occupata, la prenotazione deve essere rifiutata.
+	- Non è richiesta un’interfaccia di amministrazione; serve solo la parte pubblica, cioè quella vista dal paziente.
+
+Requisiti tecnici:
+	- Il codice deve essere pubblicato su GitHub (repository pubblico o privato condiviso con me).
+
+Il progetto deve includere un file README.md che descriva:
+	- come avviare l’applicazione (backend e frontend)
+	- eventuali scelte architetturali e motivazioni
+	- come è stato gestito il testing (unit test, integrazione, ecc.)
+
+Puoi usare un database a scelta (anche in-memory, quello che ti pare) e mock di autenticazione se serve.
+
+Tempistiche:
+	Hai tempo fino a lunedi mattina per completare il test.
+	L’obiettivo non è solo verificare il risultato finale, ma soprattutto capire il tuo approccio al codice, la struttura, la chiarezza e il modo in cui testi le funzionalità.
