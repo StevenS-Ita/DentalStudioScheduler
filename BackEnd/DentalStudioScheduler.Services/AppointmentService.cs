@@ -7,13 +7,14 @@ using DentalStudioScheduler.Model;
 using DentalStudioScheduler.Models;
 using DentalStudioScheduler.Services.Base;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Net;
 
 namespace DentalStudioScheduler.Services
 {
     public class AppointmentService
     {
+        private int startHour = 8, startBreak = 12, endBreak = 13, endHour = 17;
+
         private readonly DentalStudioContext _context;
 
         public AppointmentService(DentalStudioContext context)
@@ -48,11 +49,10 @@ namespace DentalStudioScheduler.Services
 
         public async Task<List<TimeSpan>> GetAvailableTimeSlotsAsync(DateTime date)
         {
-            var startHour = 9;
-            var endHour = 17;
             var allSlots = Enumerable.Range(startHour, endHour - startHour)
-                                     .Select(h => new TimeSpan(h, 0, 0))
-                                     .ToList();
+                .Where(h => h < startBreak || h >= endBreak) 
+                .Select(h => new TimeSpan(h, 0, 0))
+                .ToList();
 
             var bookedSlots = await _context.Appointments
                 .Where(a => a.Date.Date == date.Date)
@@ -118,10 +118,11 @@ namespace DentalStudioScheduler.Services
             model.PatientLastName = model.PatientLastName.Trim();
 
             var appointment = await _context.Appointments.FirstOrDefaultAsync(x => x.AppointmentId == model.AppointmentId);
-            if (await _context.Appointments.AnyAsync(x => (x.PatientFirstName == model.PatientFirstName && x.PatientLastName == model.PatientLastName && x.Date == model.Date) && x.AppointmentId != model.AppointmentId))
+            if (await _context.Appointments.AnyAsync(x => (x.PatientFirstName == model.PatientFirstName && x.PatientLastName == model.PatientLastName && x.Date == model.Date && x.TimeSlot == model.TimeSlot) && x.AppointmentId != model.AppointmentId))
             {
                 throw new HttpException(HttpStatusCode.BadRequest, TranslationStrings.ACTIVITY_CODE_DUPLICATE);
             }
+
 
             if (appointment == null)
             {

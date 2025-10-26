@@ -24,7 +24,7 @@ namespace DentalStudioScheduler.Controllers
             return Ok(result);
         }
 
-        [HttpGet("{appointmentId}")]
+        [HttpGet("id/{appointmentId}")]
         public async Task<IActionResult> GetAppointmentById([FromRoute] Guid appointmentId)
         {
             var result = await _appointmentService.GetAppointmentByIdAsync(appointmentId);
@@ -33,7 +33,7 @@ namespace DentalStudioScheduler.Controllers
         }
 
         [HttpGet("{date}")]
-        public async Task<IActionResult> GetAvailableSlots([FromQuery] DateTime date)
+        public async Task<IActionResult> GetAvailableSlots([FromRoute] DateTime date)
         {
             var result = await _appointmentService.GetAvailableTimeSlotsAsync(date);
 
