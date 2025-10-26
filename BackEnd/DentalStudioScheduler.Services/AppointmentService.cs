@@ -118,11 +118,26 @@ namespace DentalStudioScheduler.Services
             model.PatientLastName = model.PatientLastName.Trim();
 
             var appointment = await _context.Appointments.FirstOrDefaultAsync(x => x.AppointmentId == model.AppointmentId);
-            if (await _context.Appointments.AnyAsync(x => (x.PatientFirstName == model.PatientFirstName && x.PatientLastName == model.PatientLastName && x.Date == model.Date && x.TimeSlot == model.TimeSlot) && x.AppointmentId != model.AppointmentId))
+            if (await _context.Appointments.AnyAsync(x => (x.PatientFirstName != model.PatientFirstName && x.PatientLastName != model.PatientLastName && x.Date == model.Date && x.TimeSlot == model.TimeSlot) && x.AppointmentId != model.AppointmentId))
             {
                 throw new HttpException(HttpStatusCode.BadRequest, TranslationStrings.ACTIVITY_CODE_DUPLICATE);
             }
 
+            bool isValidTime = (model.TimeSlot >= TimeSpan.FromHours(startHour) && model.TimeSlot < TimeSpan.FromHours(startBreak)) ||
+                               (model.TimeSlot >= TimeSpan.FromHours(endBreak)  && model.TimeSlot < TimeSpan.FromHours(endHour));
+            if (!isValidTime)
+            {
+                throw new HttpException(HttpStatusCode.BadRequest, TranslationStrings.ACTIVITY_TIME_SLOT_INVALID);
+            }
+
+            bool isSlotTaken = await _context.Appointments.AnyAsync(x =>
+                x.Date == model.Date &&
+                x.TimeSlot == model.TimeSlot &&
+                x.AppointmentId != model.AppointmentId);
+            if (isSlotTaken)
+            {
+                throw new HttpException(HttpStatusCode.BadRequest, TranslationStrings.ACTIVITY_TIME_SLOT_DUPLICATE);
+            }
 
             if (appointment == null)
             {
@@ -160,6 +175,5 @@ namespace DentalStudioScheduler.Services
             _context.Appointments.Remove(item);
             await _context.SaveChangesAsync();
         }
-
     }
 }
